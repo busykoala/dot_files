@@ -1,0 +1,12 @@
+# git
+alias gd="git diff --color"
+alias gdf="git diff --color --cached"
+alias gp="git pull"
+alias gco="git checkout"
+alias gs="git status"
+alias gcm="git commit -m"
+
+# Normal aliases
+alias la='ls -lsah'
+alias grep='grep --color'
+
