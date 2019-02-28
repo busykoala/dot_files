@@ -9,6 +9,12 @@ cd ~/
 git clone https://github.com/busykoala/dot_files
 ```
 
+## Change shell to zsh
+
+```
+chsh -s /bin/zsh
+```
+
 ## Symlink config files
 
 ```
