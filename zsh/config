@@ -10,6 +10,9 @@ setopt promptsubst
 fpath=(~/dot_files/zsh/functions $fpath)
 autoload -U ~/dot_files/zsh/functions/*(:t)
 
+# add home/bin to path
+export PATH=${PATH}:${HOME}/bin
+
 #change directory without cd
 setopt autocd
 
