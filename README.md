@@ -15,9 +15,10 @@ git clone https://github.com/busykoala/dot_files
 chsh -s /bin/zsh
 ```
 
-## Symlink config files
+## Run setup file
 
 ```
-ln -s ~/dot_files/.zshrc ~/.zshrc
-ln -s ~/dot_files/.gitconfig ~/.gitconfig
+cd ~/dot_files
+chmod +x dot_setup.sh
+./dot_setup.sh
 ```
