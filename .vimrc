@@ -27,7 +27,7 @@ Plugin 'nvie/vim-flake8'
 " Search with ctrl + p
 Plugin 'kien/ctrlp.vim'
 " Git integration for nerd tree
-Plugin 'tpope/vim-fugitive'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " Vundle Plugins and Bundles (Section End)
 " #########################################
@@ -58,6 +58,10 @@ let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
 " Nerd tree hide
 let NERDTreeIgnore=['\.pyc$', '\~$']
+
+" Tab navigation
+nnoremap <C-h> :tabprevious<CR>
+nnoremap <C-l> :tabnext<CR>
 
 " ################
 " Python Settings
