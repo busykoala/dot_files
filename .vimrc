@@ -2,6 +2,11 @@
 " git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 " Use with :PluginInstall
 
+" Install mono, go, jdk10-openjdk, cmake, clang
+" Install nvm from aur
+" cd ~/.vim/bundle/YouCompleteMe
+" ./install.sh --clang-completer --system-libclang --all
+
 set nocompatible              " required
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
@@ -28,6 +33,8 @@ Plugin 'nvie/vim-flake8'
 Plugin 'kien/ctrlp.vim'
 " Git integration for nerd tree
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+" Completition Magic
+Plugin 'Valloric/YouCompleteMe'
 
 " Vundle Plugins and Bundles (Section End)
 " #########################################
