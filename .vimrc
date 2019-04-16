@@ -41,6 +41,8 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
 " Move code up down, right left with Alt+j/k
 Plugin 'matze/vim-move'
+" Toggle comments
+Plugin 'chemzqm/mycomment.vim'
 
 " Vundle Plugins and Bundles (Section End)
 " #########################################
