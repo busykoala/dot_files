@@ -75,8 +75,11 @@ map <C-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$', '\~$']
 
 " Tab navigation
-nnoremap <C-h> :tabprevious<CR>
-nnoremap <C-l> :tabnext<CR>
+nnoremap <leader>l :tabprevious<CR>
+nnoremap <leader>h :tabnext<CR>
+
+" YCM go to definiton
+nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration
 
 " Multicursor plugin bindings
 let g:multi_cursor_use_default_mapping=0
