@@ -37,8 +37,6 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'terryma/vim-multiple-cursors'
 " Git Gutter
 Plugin 'airblade/vim-gitgutter'
-" Move code up down, right left with Alt+j/k
-Plugin 'matze/vim-move'
 " Toggle comments
 Plugin 'chemzqm/mycomment.vim'
 
@@ -85,9 +83,6 @@ let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_start_word_key      = '<C-g>'
 let g:multi_cursor_next_key            = '<C-g>'
 let g:multi_cursor_quit_key            = '<Esc>'
-
-" Move code plugin
-let g:move_key_modifier = 'C'
 
 " Ale linter
 nmap <F8> <Plug>(ale_fix)
