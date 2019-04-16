@@ -55,6 +55,7 @@ set background=dark
 colorscheme hybrid_reverse
 set nu
 set encoding=utf-8
+:let mapleader = ","
 
 " Add powerline
 set  rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
@@ -77,6 +78,7 @@ nnoremap <leader>h :tabnext<CR>
 " YCM go to definiton
 nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration
 let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_confirm_extra_conf=0
 
 " Multicursor plugin bindings
 let g:multi_cursor_use_default_mapping=0
