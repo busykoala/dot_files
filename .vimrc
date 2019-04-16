@@ -39,6 +39,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'terryma/vim-multiple-cursors'
 " Git Gutter
 Plugin 'airblade/vim-gitgutter'
+" Move code up down, right left with Alt+j/k
+Plugin 'matze/vim-move'
 
 " Vundle Plugins and Bundles (Section End)
 " #########################################
@@ -80,6 +82,9 @@ let g:multi_cursor_start_word_key      = '<C-g>'
 let g:multi_cursor_next_key            = '<C-g>'
 let g:multi_cursor_quit_key            = '<Esc>'
 
+" Move code plugin
+let g:move_key_modifier = 'C'
+
 " ################
 " Python Settings
 " ################
@@ -106,5 +111,4 @@ au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2
-
 
