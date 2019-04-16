@@ -35,6 +35,10 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Completition Magic
 Plugin 'Valloric/YouCompleteMe'
+" Multicursor
+Plugin 'terryma/vim-multiple-cursors'
+" Git Gutter
+Plugin 'airblade/vim-gitgutter'
 
 " Vundle Plugins and Bundles (Section End)
 " #########################################
@@ -70,6 +74,12 @@ let NERDTreeIgnore=['\.pyc$', '\~$']
 nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-l> :tabnext<CR>
 
+" Multicursor plugin bindings
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_start_word_key      = '<C-g>'
+let g:multi_cursor_next_key            = '<C-g>'
+let g:multi_cursor_quit_key            = '<Esc>'
+
 " ################
 " Python Settings
 " ################
@@ -96,4 +106,5 @@ au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2
+
 
