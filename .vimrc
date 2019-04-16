@@ -25,10 +25,8 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'scrooloose/nerdtree'
 " Python Autoformat
 Plugin 'vim-scripts/indentpython.vim'
-" Check syntax on save
-Plugin 'vim-syntastic/syntastic'
-" PEP 8
-Plugin 'nvie/vim-flake8'
+" Ale Linting
+Plugin 'w0rp/ale'
 " Search with ctrl + p
 Plugin 'kien/ctrlp.vim'
 " Git integration for nerd tree
@@ -80,6 +78,7 @@ nnoremap <leader>h :tabnext<CR>
 
 " YCM go to definiton
 nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration
+let g:ycm_autoclose_preview_window_after_completion=1
 
 " Multicursor plugin bindings
 let g:multi_cursor_use_default_mapping=0
@@ -89,6 +88,18 @@ let g:multi_cursor_quit_key            = '<Esc>'
 
 " Move code plugin
 let g:move_key_modifier = 'C'
+
+" Ale linter
+nmap <F8> <Plug>(ale_fix)
+let g:ale_linter_aliases = {'vue': ['vue', 'javascript']}
+let g:ale_linters = {
+    \     'javascript': ['prettier', 'eslint'],
+    \     'vue': ['eslint', 'vls'],
+    \     'python': ['flake8'],
+    \ }
+let b:ale_fixers = {
+    \     'python': ['autopep8', 'isort']
+    \ }
 
 " ################
 " Python Settings
