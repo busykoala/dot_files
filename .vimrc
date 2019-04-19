@@ -6,6 +6,7 @@
 " Install nvm from aur
 " cd ~/.vim/bundle/YouCompleteMe
 " ./install.sh --clang-completer --system-libclang --all
+" python3 install.py --clang-completer
 
 set nocompatible              " required
 filetype off                  " required
@@ -37,7 +38,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'terryma/vim-multiple-cursors'
 " Git Gutter
 Plugin 'airblade/vim-gitgutter'
-" Toggle comments
+" Toggle comments (leader c)
 Plugin 'chemzqm/mycomment.vim'
 
 " Vundle Plugins and Bundles (Section End)
@@ -77,6 +78,7 @@ nnoremap <leader>h :tabnext<CR>
 
 " YCM go to definiton
 nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration
+let g:ycm_global_ycm_extra_conf = '~/dot_files/.global_ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_confirm_extra_conf=0
 
@@ -95,7 +97,10 @@ let g:ale_linters = {
     \     'python': ['flake8'],
     \ }
 let b:ale_fixers = {
-    \     'python': ['autopep8', 'isort']
+    \     'python': ['autopep8', 'isort'],
+    \     'java': ['google_java_format'],
+    \     'c++': ['uncrustify'],
+    \     'c#': ['uncrustify']
     \ }
 
 " ################
@@ -124,4 +129,3 @@ au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2
-
