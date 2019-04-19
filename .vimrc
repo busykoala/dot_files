@@ -7,6 +7,7 @@
 " cd ~/.vim/bundle/YouCompleteMe
 " ./install.sh --clang-completer --system-libclang --all
 " python3 install.py --clang-completer
+" Also see https://salsa.debian.org/debian/vim-youcompleteme#java-semantic-completion
 
 set nocompatible              " required
 filetype off                  " required
