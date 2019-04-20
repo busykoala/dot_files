@@ -9,6 +9,8 @@
 " python3 install.py --clang-completer
 " Also see https://salsa.debian.org/debian/vim-youcompleteme#java-semantic-completion
 
+" Install astyle to make use of (C-lang. formatter)
+
 set nocompatible              " required
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
@@ -90,19 +92,21 @@ let g:multi_cursor_next_key            = '<C-g>'
 let g:multi_cursor_quit_key            = '<Esc>'
 
 " Ale linter
-nmap <F8> <Plug>(ale_fix)
+au BufNewFile,BufRead *.py
+    \ nmap <F8> <Plug>(ale_fix)
 let g:ale_linter_aliases = {'vue': ['vue', 'javascript']}
 let g:ale_linters = {
-    \     'javascript': ['prettier', 'eslint'],
-    \     'vue': ['eslint', 'vls'],
     \     'python': ['flake8'],
     \ }
 let b:ale_fixers = {
     \     'python': ['autopep8', 'isort'],
     \     'java': ['google_java_format'],
-    \     'c++': ['uncrustify'],
-    \     'c#': ['uncrustify']
     \ }
+
+" astyle linter (c++, c#, c)
+au BufNewFile,BufRead *.cpp, *.java, *.cs, *.c
+    \ nnoremap <F8> :%!astyle --mode=c --style=ansi -s4<CR> |
+    \ vnoremap <F8> :!astyle --mode=c --style=ansi -s4<CR>
 
 " ################
 " Python Settings
