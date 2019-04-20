@@ -103,10 +103,16 @@ let b:ale_fixers = {
     \     'java': ['google_java_format'],
     \ }
 
-" astyle linter (c++, c#, c)
-au BufNewFile,BufRead *.cpp, *.java, *.cs, *.c
-    \ nnoremap <F8> :%!astyle --mode=c --style=ansi -s4<CR> |
-    \ vnoremap <F8> :!astyle --mode=c --style=ansi -s4<CR>
+" astyle linter
+au BufNewFile,BufRead *.cpp
+    \ nnoremap <F8> :%!astyle --mode=c --style=allman -s4<CR> |
+    \ vnoremap <F8> :!astyle --mode=c --style=allman -s4<CR>
+au BufNewFile,BufRead *.java
+    \ nnoremap <F8> :%!astyle --mode=java --style=java -s4<CR> |
+    \ vnoremap <F8> :!astyle --mode=java --style=java -s4<CR>
+au BufNewFile,BufRead *.cs
+    \ nnoremap <F8> :%!astyle --mode=cs --style=allman -s4<CR> |
+    \ vnoremap <F8> :!astyle --mode=cs --style=allman -s4<CR>
 
 " ################
 " Python Settings
