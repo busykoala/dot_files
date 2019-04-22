@@ -43,6 +43,10 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
 " Toggle comments (leader c)
 Plugin 'chemzqm/mycomment.vim'
+" File buffer in tabline
+Plugin 'ap/vim-buftabline'
+" Html, Css, Js completion
+Plugin 'mattn/emmet-vim'
 
 " Vundle Plugins and Bundles (Section End)
 " #########################################
@@ -61,6 +65,11 @@ set nu
 set encoding=utf-8
 :let mapleader = ","
 
+" Buffer mappings
+set hidden
+nnoremap <C-K> :bnext<CR>
+nnoremap <C-J> :bprev<CR>
+
 " Add powerline
 set  rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
 set laststatus=2
@@ -69,11 +78,13 @@ set t_Co=256
 " Nerd tree (open if dir)
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+autocmd VimEnter * wincmd p
 let NERDTreeShowHidden=1
-" Nerd tree bindings
-map <C-n> :NERDTreeToggle<CR>
-" Nerd tree hide
+map <C-N> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$', '\~$']
+
+" Search TODO
+com FindTodo :vimgrep /\<TODO\>/j **/* | :cope
 
 " Tab navigation
 nnoremap <leader>l :tabprevious<CR>
