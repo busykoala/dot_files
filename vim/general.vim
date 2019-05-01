@@ -9,8 +9,14 @@
 " Theming (highlight, set numbers)
 syntax on
 set background=dark
-colorscheme hybrid_reverse
 set nu
+
+" Theme from Plugin
+colorscheme space-vim-dark
+let g:space_vim_dark_background = 233
+color space-vim-dark
+
+" General stuff
 set encoding=utf-8
 :let mapleader = ","
 
@@ -34,3 +40,4 @@ let NERDTreeIgnore=['\.pyc$', '\~$', '\..pycache$', '\.git$', '\.pytest_cache$']
 
 " Search TODO
 com FindTodo :vimgrep /\<TODO\>/j **/* | :cope
+

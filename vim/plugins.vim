@@ -13,7 +13,7 @@ Plugin 'gmarik/Vundle.vim'
 " Vundle Plugins and Bundles (Section Start)
 
 " Theme
-Plugin 'kristijanhusak/vim-hybrid-material'
+Plugin 'liuchengxu/space-vim-dark'
 " Powerline
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Nerd Tree
