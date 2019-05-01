@@ -11,6 +11,8 @@
 
 " Install astyle to make use of (C-lang. formatter)
 
+" For R linter install.packages('lintr')
+
 set nocompatible              " required
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
@@ -47,6 +49,8 @@ Plugin 'chemzqm/mycomment.vim'
 Plugin 'ap/vim-buftabline'
 " Html, Css, Js completion
 Plugin 'mattn/emmet-vim'
+" R completion
+Plugin 'gaalcaras/ncm-R'
 
 " Vundle Plugins and Bundles (Section End)
 " #########################################
@@ -81,7 +85,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 autocmd VimEnter * wincmd p
 let NERDTreeShowHidden=1
 map <C-N> :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.pyc$', '\~$']
+let NERDTreeIgnore=['\.pyc$', '\~$', '\..pycache$', '\.git$', '\.pytest_cache$']
 
 " Search TODO
 com FindTodo :vimgrep /\<TODO\>/j **/* | :cope
@@ -103,7 +107,7 @@ let g:multi_cursor_next_key            = '<C-g>'
 let g:multi_cursor_quit_key            = '<Esc>'
 
 " Ale linter
-au BufNewFile,BufRead *.py
+au BufNewFile,BufRead *.py, *.R
     \ nmap <F8> <Plug>(ale_fix)
 let g:ale_linter_aliases = {'vue': ['vue', 'javascript']}
 let g:ale_linters = {
@@ -151,3 +155,27 @@ au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2
+
+" Buildout support
+" (https://github.com/FBruynbroeck/vim-buildout/blob/master/after/ftplugin/python.vim)
+py3 << EOF
+import os
+import sys
+def appendSysPathByPath(path):
+    if not path in sys.path:
+        sys.path.append(path)
+currentpath = os.getcwd().split('/')
+for i in range(len(currentpath), -1, -1):
+    position = len(currentpath) - i
+    if position:
+        currentpath = currentpath[0:-position]
+    path = "/".join(currentpath)
+    if os.path.isdir(os.path.join(path, 'plone3')):
+        path = os.path.join(path, 'plone3')
+    elif os.path.isdir(os.path.join(path, 'plone4')):
+        path = os.path.join(path, 'plone4')
+    path = os.path.join(path, 'parts', 'omelette')
+    if os.path.isdir(path):
+        appendSysPathByPath(path)
+        break
+EOF
