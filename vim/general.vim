@@ -19,6 +19,8 @@ color space-vim-dark
 " General stuff
 set encoding=utf-8
 :let mapleader = ","
+set laststatus=2
+set t_Co=256
 
 " Enable backspace
 set backspace=indent,eol,start
@@ -27,11 +29,6 @@ set backspace=indent,eol,start
 set hidden
 nnoremap <C-K> :bnext<CR>
 nnoremap <C-J> :bprev<CR>
-
-" Add powerline
-set  rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
-set laststatus=2
-set t_Co=256
 
 " Nerd tree (open if dir)
 autocmd StdinReadPre * let s:std_in=1
