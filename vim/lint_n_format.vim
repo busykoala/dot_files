@@ -4,7 +4,7 @@
 " ###########################
 
 " Ale linter
-au BufNewFile,BufRead *.py, *.R
+au BufNewFile,BufRead *.py,*.R
     \ nmap <F8> <Plug>(ale_fix)
 let g:ale_linter_aliases = {'vue': ['vue', 'javascript']}
 let g:ale_linters = {

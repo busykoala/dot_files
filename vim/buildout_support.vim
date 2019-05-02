@@ -1,23 +1,9 @@
-" ################
-" Python Settings
-" ################
-
-au BufNewFile,BufRead *.py
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
-    \ set textwidth=79 |
-    \ set expandtab |
-    \ set autoindent |
-    \ set fileformat=unix
-
-" Remove white space
-autocmd BufWritePre *.py :%s/\s\+$//e
-" Python highlight
-let python_highlight_all=1
-
+" #################
 " Buildout support
+" #################
+
 " (https://github.com/FBruynbroeck/vim-buildout/blob/master/after/ftplugin/python.vim)
+
 py3 << EOF
 import os
 import sys

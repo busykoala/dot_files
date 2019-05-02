@@ -40,6 +40,8 @@ Plugin 'ap/vim-buftabline'
 Plugin 'mattn/emmet-vim'
 " R completion
 Plugin 'gaalcaras/ncm-R'
+" Editor Config
+Plugin 'editorconfig/editorconfig-vim'
 
 " Vundle Plugins and Bundles (Section End)
 " #########################################
