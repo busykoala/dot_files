@@ -20,8 +20,8 @@ color space-vim-dark
 set encoding=utf-8
 :let mapleader = ","
 
-" Set path for editorconfig
-let g:EditorConfig_exec_path = '~/dot_files/vim/editorconfig.vim'
+" Enable backspace
+set backspace=indent,eol,start
 
 " Buffer mappings
 set hidden
