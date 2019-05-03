@@ -39,3 +39,4 @@ ln -sf ~/dot_files/.gitconfig ~/.gitconfig
 ln -sf ~/dot_files/.gitignore ~/.gitignore
 ln -sf ~/dot_files/.zshrc ~/.zshrc
 ln -sf ~/dot_files/.editorconfig ~/.editorconfig
+ln -sf ~/dot_files/.isort.cfg ~/.isort.cfg
