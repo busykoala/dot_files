@@ -47,3 +47,9 @@ eval "$(rbenv init -)"
 # https://dev.to/lobo_tuerto/how-to-install-nodejs-in-manjaro-linux--5ha4
 source /usr/share/nvm/init-nvm.sh
 export PATH=$PATH:~/.yarn/bin
+
+# Mount MyCloud
+MYCLOUD_CONNECT=~/.mycloud_connect.sh
+if [ -f "$MYCLOUD_CONNECT" ]; then
+    source $MYCLOUD_CONNECT
+fi
