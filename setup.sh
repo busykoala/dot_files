@@ -12,7 +12,8 @@ fi
 
 # Symlink .vimrc
 ln -sf ~/vim_config/.vimrc ~/.vimrc
-ln -sf ~/vim_config/.editorconfig ~/.editorconfig
+# Symlink does not work
+cp -f ~/vim_config/.editorconfig ~/.editorconfig
 
 YCM_REPO_FOLDER=~/.vim/bundle/Vundle.vim
 YCM_REPO_URL=https://github.com/gmarik/Vundle.vim.git
