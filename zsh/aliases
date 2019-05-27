@@ -9,4 +9,3 @@ alias gcm="git commit -m"
 # Normal aliases
 alias la='ls -lsah'
 alias grep='grep --color'
-

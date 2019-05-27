@@ -49,7 +49,7 @@ source /usr/share/nvm/init-nvm.sh
 export PATH=$PATH:~/.yarn/bin
 
 # Mount MyCloud
-MYCLOUD_CONNECT=~/.mycloud_connect.sh
-if [ -f "$MYCLOUD_CONNECT" ]; then
-    source $MYCLOUD_CONNECT
-fi
+#MYCLOUD_CONNECT=~/.mycloud_connect.sh
+#if [ -f "$MYCLOUD_CONNECT" ]; then
+#    source $MYCLOUD_CONNECT
+#fi
