@@ -48,8 +48,13 @@ eval "$(rbenv init -)"
 source /usr/share/nvm/init-nvm.sh
 export PATH=$PATH:~/.yarn/bin
 
-# Mount MyCloud
-#MYCLOUD_CONNECT=~/.mycloud_connect.sh
-#if [ -f "$MYCLOUD_CONNECT" ]; then
-#    source $MYCLOUD_CONNECT
-#fi
+# Dots to "Path" from Jone
+rationalise-dot() {
+if [[ $LBUFFER != g* && $LBUFFER = *.. ]]; then
+    LBUFFER+=/..
+else
+    LBUFFER+=.
+fi
+}
+zle -N rationalise-dot
+bindkey . rationalise-dot
