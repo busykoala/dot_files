@@ -6,6 +6,10 @@ alias gco="git checkout"
 alias gs="git status"
 alias gcm="git commit -m"
 
-# Normal aliases
-alias la='ls -lsah'
+# Use exa instead of ls if installed
+if hash exa 2>/dev/null; then
+    alias la='exa -hal'
+else
+    alias la='ls -lsah'
+fi
 alias grep='grep --color'
