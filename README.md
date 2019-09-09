@@ -2,7 +2,7 @@
 
 Dotfiles for a linux setup
 
-## Clone repository
+## Setup dotfiles
 
 ```
 git clone https://github.com/busykoala/dot_files ~/dot_files
@@ -11,8 +11,15 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-## Change shell to zsh
+## Setup manjaro
+
+Get Manjaro with i3wm from `https://manjaro.org/download/i3/`.
+
+
+
 
 ```
-chsh -s /bin/zsh
+cd ~/dot_files
+chmod +x setup_manjaro.sh
+./setup_manjaro.sh
 ```
