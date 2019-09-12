@@ -1,18 +1,15 @@
-# dot_files
+# Setup Manjaro (i3wm)
 
-Dotfiles for a linux setup
+Dotfiles for a manjaro setup.
 
-## Clone repository
+## Setup dotfiles
+
+Get Manjaro with i3wm from `https://manjaro.org/download/i3/`.
+Username has to be busykoala!
 
 ```
 git clone https://github.com/busykoala/dot_files ~/dot_files
 cd ~/dot_files
-chmod +x setup.sh
-./setup.sh
-```
-
-## Change shell to zsh
-
-```
-chsh -s /bin/zsh
+chmod +x setup_manjaro.sh
+sudo ./setup_manjaro.sh
 ```
