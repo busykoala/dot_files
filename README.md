@@ -14,12 +14,12 @@ chmod +x setup.sh
 ## Setup manjaro
 
 Get Manjaro with i3wm from `https://manjaro.org/download/i3/`.
-
-
-
+Username has to be busykoala!
 
 ```
 cd ~/dot_files
+chmod +x setup.sh
 chmod +x setup_manjaro.sh
-./setup_manjaro.sh
+./setup.sh
+sudo ./setup_manjaro.sh
 ```
