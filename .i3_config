@@ -272,6 +272,7 @@ bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id xbindkeys
+exec --no-startup-id xset r rate 120 30
 exec --no-startup-id setxkbmap -option 'caps:ctrl_modifier'
 exec --no-startup-id nitrogen --set-zoom-fill /usr/share/backgrounds/wallpaper.jpg
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
