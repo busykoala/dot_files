@@ -1,20 +1,36 @@
 #!/usr/bin/bash
 
+###################
+# Install programs
+###################
+
 # Update database & upgrade
-sudo pacman -Syu
+pacman -Syu
+# terminal emulator
+pacman -S terminator --noconfirm
+# launcher
+pacman -S rofi --noconfirm
+# git
+pacman -S git --noconfirm
+# screenshot tool
+pacman -S scrot --noconfirm
+# gimp
+pacman -S gimp --noconfirm
+# keybinding app
+pacman -S xbindkeys --noconfirm
+# zsh (shell)
+pacman -S zsh zsh-completions --noconfirm
 
-# Install packages
-sudo pacman -S terminator --noconfirm
-sudo pacman -S rofi --noconfirm
-sudo pacman -S git --noconfirm
+############
+# Settings
+############
 
-# Install and set zsh shell
-sudo pacman -S zsh zsh-completions --noconfirm
-chsh -s /usr/bin/zsh
-
-# Install xbindkeys for key bindings
-sudo pacman -S xbindkeys --noconfirm
-xbindkeys -d > ~/.xbindkeysrc
+# Set zsh shell
+chsh -s /usr/bin/zsh $USER
+# Symlink xbindkeys
+ln -sf ~/dot_files/.xbindkeysrc ~/.xbindkeysrc
+# Symlink i3 config
+ln -sf ~/dot_files/.i3_config ~/.i3/config
 
 # Set keyboard layout
-# sudo cp -f ~/dot_files/examples/00-keyboard.conf /etc/X11/xorg.conf.d/00-keyboard.conf
+#  cp -f ~/dot_files/examples/00-keyboard.conf /etc/X11/xorg.conf.d/00-keyboard.conf
