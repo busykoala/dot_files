@@ -82,13 +82,15 @@ echo "*** Start pulling and building NVM ***"
 su - busykoala -c "git clone https://aur.archlinux.org/nvm.git ~/Downloads/nvm"
 su - busykoala -c "cd ~/Downloads/nvm && makepkg -Si --needed"
 su - busykoala -c "rm -rf ~/Downloads/nvm"
-pwd
 # setup rbenv
 echo "*** RBENV Settings ***"
 su - busykoala -c "rbenv install 2.6.2"
 su - busykoala -c "rbenv global 2.6.2"
 # install scss_lint for vim
 gem install scss_lint
+
+# Install pyenv
+su - busykoala -c "git clone https://github.com/pyenv/pyenv.git ~/.pyenv"
 
 ####################
 # Dotfiles and Vim
