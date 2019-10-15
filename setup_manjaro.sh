@@ -20,12 +20,13 @@ pacman -S --needed --noconfirm gimp
 pacman -S --needed --noconfirm xbindkeys
 # zsh (shell)
 pacman -S --needed --noconfirm zsh zsh-completions
-# clipboard manager
-pacman -S --needed --noconfirm clipit
+# clipboard manager and xclip (for screenshot to clipboard mod+p)
+pacman -S --needed --noconfirm copyq
+pacman -S --needed --noconfirm xclip
 # web browser
 pacman -S --needed --noconfirm firefox
 # install vim dependencies
-pacman -S --needed --noconfirm fzf the_silver_searcher astyle
+pacman -S --needed --noconfirm fzf the_silver_searcher astyle ripgrep
 # install docker
 pacman -S --needed --noconfirm docker
 # install some programming stuff
