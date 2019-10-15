@@ -13,3 +13,9 @@ cd ~/dot_files
 chmod +x setup_manjaro.sh
 sudo ./setup_manjaro.sh
 ```
+
+## Some custom stuff
+
+`mod` is the windows key  
+`mod + p` to take screenshots (selection) -> to clipboard  
+`alt + space` to open rofi in exec mode  
