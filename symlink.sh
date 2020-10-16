@@ -5,7 +5,6 @@ ln -sf $HOME/dot_files/i3_config $HOME/.i3/config
 
 # GIT CONFIG
 ln -sf $HOME/dot_files/gitconfig $HOME/.gitconfig
-ln -sf $HOME/dot_files/gitignore $HOME/.gitignore
 
 # KEYBINDINGS
 ln -sf $HOME/dot_files/xbindkeysrc $HOME/.xbindkeysrc
