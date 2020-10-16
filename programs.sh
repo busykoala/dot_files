@@ -20,14 +20,14 @@ libffi
 libyaml
 openssl
 zlib
-java11-openjfx
+java11-openjdk
 pulseaudio-bluetooth
 virtualbox-guest-iso
 virtualbox
+keychain
+exa
+yarn
 "
 for val in $Programs; do
     pacman -S --needed --noconfirm $val
 done
-
-# set time (teams issue sso)
-# ntpd -qg

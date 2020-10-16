@@ -1,0 +1,29 @@
+# language and base path
+export PATH=${PATH}:${HOME}/bin
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# Setup Python environment
+export PYTHONSTARTUP=$HOME/.pythonrc
+
+# pyenv (python version manager)
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+# nodenv (node version manager)
+export NODENV_ROOT="$HOME/.nodenv"
+export PATH="$NODENV_ROOT/bin:$PATH"
+
+# rbenv (ruby version manager)
+export RBENV_ROOT="$HOME/.rbenv"
+export PATH="$RBENV_ROOT/bin:$PATH"
+
+# fzf
+export FZF_ROOT="$HOME/.fzf"
+export PATH="$FZF_ROOT/bin:$PATH"
+
+# deactivate dotnet spying
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+# Set Java environment
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
