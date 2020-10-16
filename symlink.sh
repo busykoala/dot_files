@@ -2,6 +2,7 @@
 
 # i3 CONFIG
 ln -sf $HOME/dot_files/i3_config $HOME/.i3/config
+ln -sf $HOME/dot_files/mimeapps.list $HOME/.config/mimeapps.list
 
 # GIT CONFIG
 ln -sf $HOME/dot_files/gitconfig $HOME/.gitconfig
