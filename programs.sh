@@ -27,6 +27,7 @@ virtualbox
 keychain
 exa
 yarn
+owncloud-client
 "
 for val in $Programs; do
     pacman -S --needed --noconfirm $val
