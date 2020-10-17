@@ -284,6 +284,7 @@ exec --no-startup-id pamac-tray
 #exec --no-startup-id clipit
 exec --no-startup-id copyq
 exec --no-startup-id blueman-tray
+exec --no-startup-id owncloud
 # copying to clipboard (and copyq_screenshots dir)
 bindsym $mod+p --release exec "notify-send 'selection will be saved to ~/copyq_screenshots'; scrot -se 'mv $f ~/copyq_screenshots && xclip -selection clipboard -t image/png -i ~/copyq_screenshots/$n'"
 # exec --no-startup-id blueman-applet
