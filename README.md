@@ -72,6 +72,7 @@ sudo pacman -U teams-a.b.pkg.tar.xz
 
 - teams
 - google-chrome
+- spotify
 
 #### From source (other than AUR)
 
