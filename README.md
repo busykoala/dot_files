@@ -90,3 +90,4 @@ git clone https://github.com/nodenv/node-build.git "$(nodenv root)"/plugins/node
 Rust: https://rustup.rs/
 Poetry: https://python-poetry.org/docs/#installation
 jetbrains-toolbox (unpack to ~/bin/)
+texlive-most: pacman (install all)
