@@ -29,6 +29,7 @@ exa
 yarn
 owncloud-client
 xorg-xrandr
+thunderbird
 "
 for val in $Programs; do
     pacman -S --needed --noconfirm $val
