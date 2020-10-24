@@ -85,6 +85,12 @@ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 git clone https://github.com/nodenv/nodenv.git ~/.nodenv
 mkdir -p "$(nodenv root)"/plugins
 git clone https://github.com/nodenv/node-build.git "$(nodenv root)"/plugins/node-build
+# gtm (check if there is a more current version...)
+wget https://github.com/git-time-metric/gtm/releases/download/v1.3.5/gtm.v1.3.5.linux.tar.gz -P $HOME/Downloads/
+cd $HOME/Downloads
+tar -xf gtm.v1.3.5.linux.tar.gz
+mkdir $HOME/bin
+cp gtm $HOME/bin/gtm
 ```
 
 Rust: https://rustup.rs/
