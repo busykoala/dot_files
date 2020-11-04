@@ -31,6 +31,7 @@ owncloud-client
 xorg-xrandr
 thunderbird
 arandr
+dnsutils
 "
 for val in $Programs; do
     pacman -S --needed --noconfirm $val
