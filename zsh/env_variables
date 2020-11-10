@@ -25,6 +25,7 @@ export PATH="$FZF_ROOT/bin:$PATH"
 
 # deactivate dotnet spying
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+export PATH="$HOME/.dotnet:$PATH"
 
 # Set Java environment
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
