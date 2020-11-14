@@ -32,7 +32,11 @@ xorg-xrandr
 thunderbird
 arandr
 dnsutils
+volumeicon
+pavucontrol
 "
 for val in $Programs; do
     pacman -S --needed --noconfirm $val
 done
+
+# pavucontrol instead of pulseaudio in volumeicon...
