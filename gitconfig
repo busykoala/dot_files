@@ -11,6 +11,8 @@
     hooksPath = ~/dot_files/githooks
 [branch]
     autosetuprebase = always
+[pull]
+    rebase = true
 [format]
     pretty = %C(blue)%h%Creset %s %C(green)%d%Creset [%C(red)%an%Creset, %C(cyan)%cr%Creset] %C(bold reverse)%N%Creset
 [rerere]
