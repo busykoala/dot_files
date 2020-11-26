@@ -36,7 +36,7 @@ volumeicon
 pavucontrol
 zathura
 zathura-pdf-mupdf
-xournalapp
+xournalpp
 "
 for val in $Programs; do
     pacman -S --needed --noconfirm $val
