@@ -37,6 +37,8 @@ pavucontrol
 zathura
 zathura-pdf-mupdf
 xournalpp
+nautilus
+gnome-disk-utility
 "
 for val in $Programs; do
     pacman -S --needed --noconfirm $val
