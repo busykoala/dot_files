@@ -18,3 +18,4 @@ alias display-HDMI1-on="xrandr --output HDMI1 --auto --left-of eDP1"
 alias display-HDMI1-off="xrandr --output HDMI1 --off"
 
 alias unmute="pactl set-sink-mute 0 false"
+alias toctrl="setxkbmap -option 'caps:ctrl_modifier'"
