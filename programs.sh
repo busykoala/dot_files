@@ -39,6 +39,7 @@ zathura-pdf-mupdf
 xournalpp
 nautilus
 gnome-disk-utility
+noto-fonts-emoji
 "
 for val in $Programs; do
     pacman -S --needed --noconfirm $val
