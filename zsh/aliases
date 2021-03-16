@@ -19,3 +19,5 @@ alias display-HDMI1-off="xrandr --output HDMI1 --off"
 
 alias unmute="pactl set-sink-mute 0 false"
 alias toctrl="setxkbmap -option 'caps:ctrl_modifier'"
+
+alias em="emacs -nw"

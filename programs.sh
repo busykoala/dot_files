@@ -40,6 +40,8 @@ xournalpp
 nautilus
 gnome-disk-utility
 noto-fonts-emoji
+obs-studio
+v4l2loopback-dkms
 "
 for val in $Programs; do
     pacman -S --needed --noconfirm $val

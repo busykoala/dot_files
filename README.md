@@ -97,3 +97,10 @@ Rust: https://rustup.rs/
 Poetry: https://python-poetry.org/docs/#installation
 jetbrains-toolbox (unpack to ~/bin/)
 texlive-most: pacman (install all)
+
+### Other Stuff
+
+```
+# obs-studio dep
+sudo pacman -S "linux$(uname -r | awk -F. '{print $1$2}')-headers"
+```
