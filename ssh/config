@@ -18,3 +18,7 @@ Host                    cockpitServer
 Host                    dvzo
   Hostname              65.21.3.90
   User                  root
+
+Host                    worldclassroom
+  Hostname              135.181.84.78
+  User                  deer
