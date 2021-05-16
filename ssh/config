@@ -6,10 +6,6 @@ Host                    *
   UseKeychain           yes
   AddKeysToAgent        yes
 
-Host                    homeServer
-  Hostname              188.68.33.226
-  ProxyJump             cockpitServer
-
 Host                    rootServer
   Hostname              194.13.82.8
   User                  root
@@ -17,4 +13,8 @@ Host                    rootServer
 
 Host                    cockpitServer
   Hostname              194.13.80.17
+  User                  root
+
+Host                    dvzo
+  Hostname              65.21.3.90
   User                  root
