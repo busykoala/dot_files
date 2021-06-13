@@ -43,6 +43,7 @@ noto-fonts-emoji
 obs-studio
 v4l2loopback-dkms
 k9s
+keepassxc
 "
 for val in $Programs; do
     pacman -S --needed --noconfirm $val
